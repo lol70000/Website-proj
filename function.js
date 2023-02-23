@@ -1,5 +1,4 @@
-function getBudget(){
-}
+
 const budget = document.getElementById("salary")
 
 var xValues=[10,20,30,40,50,60,70]
@@ -11,8 +10,8 @@ new Chart("Capital_general",{
         labels: xValues,
         datasets:[{
             fill:false,
-            backgroundColor:"rgb(300,0,0)",
-            borderColor:"rgb(200,1,0)",
+            backgroundColor:"rgb(22,144,148)",
+            borderColor:"rgb(22,144,148)",
             data: yValues
         }]
     },
@@ -28,5 +27,18 @@ new Chart("Capital_general",{
 const d = new Date().toLocaleString().split(',')[0]
 
 console.log(d)
+var x=4
+var y=9
 
-document.getElementById("Remaining_balance").innerHTML = 5+7;
+function getexp(){
+    const rent = document.getElementById("rent")
+    const utilities = document.getElementById("hello")
+    const groceries = document.getElementById("groceries")
+    var exp = rent + utilities + groceries
+}
+
+const submit = document.getElementById("submit")
+submit.onclick = getexp
+
+document.getElementById("Remaining_balance").innerHTML = budget - exp;
+console.log(budget - exp)

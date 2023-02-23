@@ -10,11 +10,14 @@
 }
 .header{
     width:700px;
-    color: rgb(32, 23, 118);;
+    color: rgb(22, 144, 148);;
 }
 
+.header2{
+    font-size: 35px;
+}
 .pee{
-    color:rgb(32, 23, 118);
+    color:rgb(22, 144, 148);
     font-size: 27px;
 }
 
@@ -28,5 +31,57 @@ body{
 }
 
 .text{
-    width: 100px;
+    font: 20px sans-serif;
+    
 }
+
+.input{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: rgb(13, 80, 82);
+    border-radius: 4px;
+    text-align:center;
+    font: 25px sans-serif
+}
+
+.send{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: rgb(13, 80, 82);
+    border-radius: 4px;
+    text-align: center;
+    font: 17px sans-serif;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-row-center{
+    display: flex;
+    flex-direction: row;
+    width:35%;
+    margin:auto;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.padding-right{
+    padding-right: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+  }

@@ -11,71 +11,58 @@
       <div class="header">
         <h1 >Financial Planning and Budgeting</h1>
       </div>
-      <div class="pee">
-        <p>hello</p>
-      </div>
     </div>
   </header>
 
 
   <main>
-    <section id="charts">
-      <h2>Capital</h2>
-      <div class="box2">
-        <div class="chart">
-          <canvas id="Capital_general" style="width:100%;max-width:700px;height:100%"></canvas>
-        </div>
+    <div class="flex-row">
+      <div>
+        <section id="charts">
+          <h2>Capital</h2>
+          <div class="box2">
+            <div class="chart">
+              <canvas id="Capital_general" style="width:100%;max-width:700px;height:100%"></canvas>
+            </div>
+            <div>
+              <h3 class="text" id="Remaining_balance"></h3>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="flex-column">
         <div>
-          <h3 class="text" id="Remaining_balance"></h3>
+          <h2>Income</h2>
+          <form>
+            <label for="Budget">Monthly Budget:</label>
+            <input class="input" type="Budget" id="salary" name="Budget">
+            <br>
+            <input class="send" type="submit" value="Save">
+          </form>
+        </div>
+
+        <div>
+          <h2></h2>
+          <form>
+            <label for="goal">Goal:</label>
+            <input class="input" type="text" id="goal" name="goal">
+            <br>
+            <br>
+            <label for="amount">Amount:</label>
+            <input class="input" type="number" id="amount" name="amount">
+            <br>
+            <br>
+            <label for="deadline">Deadline:</label>
+            <input class="input" type="date" id="deadline" name="deadline">
+            <br>
+            <br>
+            <input class="send" type="submit" value="Save">
+          </form>
         </div>
       </div>
-    </section>
-    <section id="income">
-      <h2>Income</h2>
-      <form>
-        <label for="Budget">Monthly Budget:</label>
-        <input type="Budget" id="salary" name="Budget">
-        <br>
-        <input type="submit" value="Save">
-      </form>
-    </section>
+    </div>
 
-    <section id="expenses">
-      <h2>Expenses</h2>
-      <form>
-        <label for="rent">Rent:</label>
-        <input type="number" id="rent" name="rent">
-        <br>
-        <label for="utilities">Utilities:</label>
-        <input type="number" id="utilities" name="utilities">
-        <br>
-        <label for="groceries">Groceries:</label>
-        <input type="number" id="groceries" name="groceries">
-        <br>
-        <input type="submit" value="Save">
-      </form>
-    </section>
-
-    <section id="budget">
-      <h2>Budget</h2>
-      <p id="budget-result"></p>
-    </section>
-
-    <section id="goals">
-      <h2>Goals</h2>
-      <form>
-        <label for="goal">Goal:</label>
-        <input type="text" id="goal" name="goal">
-        <br>
-        <label for="amount">Amount:</label>
-        <input type="number" id="amount" name="amount">
-        <br>
-        <label for="deadline">Deadline:</label>
-        <input type="date" id="deadline" name="deadline">
-        <br>
-        <input type="submit" value="Save">
-      </form>
-    </section>
   </main>
 
   <script src="function.js"></script>
