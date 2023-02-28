@@ -8,6 +8,16 @@
     display: flex;
     flex-direction: row;
 }
+
+.box3{
+    width:314px;
+    height: 29px;
+    background: rgb(13, 80, 82);
+    border-radius:4px;
+    text-align: center;
+    font: 25px sans-serif;
+}
+
 .header{
     width:700px;
     color: rgb(22, 144, 148);;

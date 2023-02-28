@@ -23,22 +23,10 @@ new Chart("Capital_general",{
     },
 });
 
-
-const d = new Date().toLocaleString().split(',')[0]
-
-console.log(d)
-var x=4
-var y=9
-
-function getexp(){
-    const rent = document.getElementById("rent")
-    const utilities = document.getElementById("hello")
-    const groceries = document.getElementById("groceries")
-    var exp = rent + utilities + groceries
-}
-
-const submit = document.getElementById("submit")
-submit.onclick = getexp
-
-document.getElementById("Remaining_balance").innerHTML = budget - exp;
-console.log(budget - exp)
+var dt = new Date;
+var day = dt.getDate()
+var month = dt.getMonth()
+var year = dt.getFullYear()
+document.getElementById("one").innerHTML = day.toString() + "/" + month.toString() + "/" + year.toString()
+var ballance = 100
+document.getElementById("two").innerHTML = "Ballance:" +ballance.toString()
