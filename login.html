@@ -2,21 +2,24 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Login Page</title>
   </head>
   <body>
-    <h1>Login</h1>
+    <h1 class="center-horiz">Please Login</h1>
     <form>
-      <div>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="">
+      <div class="center-horiz">
+        <label class="text" id="username">Username:</label>
+        <input class="input" type="text" id="username" name="">
       </div>
-      <div>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="">
+      <br>
+      <div class="center-horiz">
+        <label class="text" for="password">Password:</label>
+        <input class="input" type="password" id="password" name="">
       </div>
-      <div>
-        <button id ="submit" type="submit">Submit</button>
+      <br>
+      <div class="center-horiz">
+        <button class="send" id ="submit-login" type="submit">Submit</button>
       </div>
     </form>
   <script src="login.js"></script>

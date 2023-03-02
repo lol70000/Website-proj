@@ -1,4 +1,3 @@
-
 const budget = document.getElementById("salary")
 
 var xValues=[10,20,30,40,50,60,70]
@@ -24,9 +23,18 @@ new Chart("Capital_general",{
 });
 
 var dt = new Date;
-var day = dt.getDate()
-var month = dt.getMonth()
-var year = dt.getFullYear()
-document.getElementById("one").innerHTML = day.toString() + "/" + month.toString() + "/" + year.toString()
-var ballance = 100
-document.getElementById("two").innerHTML = "Ballance:" +ballance.toString()
+var day = dt.getDate():
+var month = dt.getMonth();
+var year = dt.getFullYear();
+document.getElementById("one").innerHTML = day.toString() + "/" + month.toString() + "/" + year.toString();
+var ballance = 100;
+document.getElementById("two").innerHTML = "Ballance:" + ballance.toString();
+
+function logincheck(){
+    if (document.getElementById === null){
+        if 
+    }
+}
+
+const login = document.getElementById("submit-login");
+login.onclick() = logincheck;

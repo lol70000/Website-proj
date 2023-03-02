@@ -95,3 +95,15 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
   }
+
+.center-horiz{
+    width:100%;
+    text-align: center;
+}
+
+.padding-bottom{
+    padding-bottom: 20px;
+}
+.padding-top{
+    padding-top: 20px;
+}
