@@ -4,7 +4,7 @@ $user = "root";
 $pw = "root";
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=ef5_proj;charset=utf8", $user, $pw);
+    $conn = new PDO("mysql:host=$servername;dbname=ef5_webproj;charset=utf8", $user, $pw);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "<p style='color:rgb(87, 119, 143)'>Connected!<br></p>";
 } catch (PDOException $e) {
@@ -15,7 +15,9 @@ $createTableUser ='
     CREATE TABLE user(
         id_user INT AUTO_INCREMENT,
         name VARCHAR(100) NOT NULL,
-        PRIMARY KEY(id_user)
+        pw INT NOT NULL,
+        PRIMARY KEY(id_user),
+        FOREIGN KEY(pw) REFERENCES pw(id_pw)
     );';
 
 $createTablePW ='
