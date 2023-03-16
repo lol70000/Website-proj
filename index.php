@@ -1,11 +1,13 @@
 <?php
-$servername = "localhost";
-$user = "root";
-$pw = "root";
+$servername = "aropawoz.mysql.db.internal";
+$user = "aropawoz_tobilu";
+$pw = "WTp5g3bsVA8HfC-*f3+N";
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=ef5_webproj;charset=utf8", $user, $pw);
+    include "delete.php";
+    $conn = new PDO("mysql:host=$servername;dbname=aropawoz_financialplanning;charset=utf8", $user, $pw);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
     echo "<p style='color:rgb(87, 119, 143)'>Connected!<br></p>";
 } catch (PDOException $e) {
     echo "<p style='color:rgb(87, 119, 143)'>Connection failed. " . $e->getMessage()."</p>";
@@ -23,7 +25,7 @@ $createTableUser ='
 $createTablePW ='
     CREATE TABLE pw(
         id_pw INT AUTO_INCREMENT,
-        pw VARCHAR(100) NOT NULL,
+        name VARCHAR(100) NOT NULL,
         PRIMARY KEY(id_pw)
     );';
 
@@ -49,9 +51,9 @@ $createTableVariable ='
     );';
 
 try{
-    $conn->exec($createTableMonthly);
     $conn->exec($createTablePW);
     $conn->exec($createTableUser);
+    $conn->exec($createTableMonthly);
     $conn->exec($createTableVariable);
     echo "<p>created</p>";
 }catch(PDOException $e){
