@@ -1,13 +1,18 @@
 
 <?php
 
+//$servername = "aropawoz.mysql.db.internal";
+//$username = "aropawoz_tobilu";
+//$password = "WTp5g3bsVA8HfC-*f3+N";
+//$name = "aropawoz_financialplanning"
 $servername = "localhost";
 $username = "root";
 $password = "root";
+$name ="ef5_webproj";
 
 //Establish connection with database
 try{
-    $conn = new PDO("mysql:host=$servername;dbname=ef5_webproj", $username, $password);
+    $conn = new PDO("mysql:host=$servername;dbname=$name", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e){
     echo "<p style='color:rgb(87, 119, 143)'>Connection failed.<br></p>". $e->getMessage();

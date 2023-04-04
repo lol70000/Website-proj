@@ -22,8 +22,9 @@ function logincheck(event){
     event.preventDefault();
     if (document.getElementById("username") != null){
         if (document.getElementById("password") != null){
-            if (document.getElementById("password_check") != null && document.getElementById("password_check") === document.getElementById("password")){
-                run(document.getElementById("username"),document.getElementById("password"))
+            if (document.getElementById("password_check") != null && document.getElementById("password_check").value === document.getElementById("password").value){
+                console.log("hello")
+                run(document.getElementById("username").value,document.getElementById("password").value)
             };
         };
     };
