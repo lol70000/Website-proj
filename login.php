@@ -1,15 +1,36 @@
 <?php
+//$servername = "aropawoz.mysql.db.internal";
+//$user = "aropawoz_tobilu";
+//$pw = "WTp5g3bsVA8HfC-*f3+N";
+//$name = "aropawoz_financialplanning"
 $servername = "localhost";
 $user = "root";
 $pw = "root";
+$name ="ef5_webproj";
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=ef5_proj;charset=utf8", $user, $pw);
+    header("Access-Control-Allow-Origin: *");
+    $conn = new PDO("mysql:host=$servername;dbname=$name;charset=utf8", $user, $pw);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "<p style='color:rgb(87, 119, 143)'>Connected!<br></p>";
 } catch (PDOException $e) {
     echo "<p style='color:rgb(87, 119, 143)'>Connection failed. " . $e->getMessage()."</p>";
 };
 
-
-?>
+try{
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    echo "$username,$password";
+    $checkusername = $conn->prepare("SELECT count(name) FROM user WHERE name=$username");
+    $checkusername->execute();
+    $countusername = $checkusername->fetchColumn();
+    $checkpasswword = $conn->prepare("SELECT count(name) FROM pw WHERE name=$password AND id_pw=$countusername");
+    $checkpasswword->execute();
+    $countpassword = $checkpasswword->fetchColumn();
+    if($countusername == 0 || $countpassword == 0){
+        $data = array("Username/Password nicht vorhanden!");
+        header("Content-Type: application/json");
+        echo json_encode($data);
+    }
+}catch(PDOException $e){
+    echo "<p style='color:rgb(87, 119, 143)'>Connection failed. " . $e->getMessage()."</p>";
+};

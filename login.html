@@ -3,25 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Login Page</title>
+    <title>LOgin Page</title>
   </head>
   <body>
-    <h1 class="center-horiz">Please Login</h1>
+    <h1 class="center-horiz" id="submit-registration">Please login here:</h1>
     <form>
       <div class="center-horiz">
-        <label class="text" id="username">Username:</label>
-        <input class="input" type="text" id="username" name="">
+        <label class="text" for="username">Username:</label>
+        <input class="input" type="text" id="login-username" name="">
       </div>
       <br>
       <div class="center-horiz">
         <label class="text" for="password">Password:</label>
-        <input class="input" type="password" id="password" name="">
+        <input class="input" type="password" id="login-password" name="">
       </div>
       <br>
-      <div class="center-horiz">
-        <button class="send" id ="submit-login" type="submit">Submit</button>
+      <div class="center-horiz-send">
+        <button type="submit" class="send" id ="submit-login" >Submit</button>
       </div>
     </form>
-  <script src="login.js"></script>
+    <div class="center-horiz">
+        <a class="link" href="registration.html">If you dont have an Account yet login here</a>
+    </div>
+  <script src="registration.js"></script>
   </body>
 </html>
