@@ -20,7 +20,7 @@ try {
 $createTableUser ='
     CREATE TABLE user(
         id_user INT AUTO_INCREMENT,
-        name VARCHAR(100) NOT NULL,
+        username VARCHAR(100) NOT NULL,
         pw INT NOT NULL,
         PRIMARY KEY(id_user),
         FOREIGN KEY(pw) REFERENCES pw(id_pw)

@@ -20,9 +20,11 @@ try{
     $username = $_POST['username'];
     $password = $_POST['password'];
     echo "$username,$password";
-    $checkusername = $conn->prepare("SELECT count(name) FROM user WHERE name=$username");
+    $checkusername = $conn->prepare("SELECT username, pw FROM user");
     $checkusername->execute();
+    echo "hello";
     $countusername = $checkusername->fetchColumn();
+    echo"$countusername";
     $checkpasswword = $conn->prepare("SELECT count(name) FROM pw WHERE name=$password AND id_pw=$countusername");
     $checkpasswword->execute();
     $countpassword = $checkpasswword->fetchColumn();
@@ -30,7 +32,11 @@ try{
         $data = array("Username/Password nicht vorhanden!");
         header("Content-Type: application/json");
         echo json_encode($data);
-    }
+    }elseif($countusername > 0 || $countpassword == 0){
+        $data = array("Login was succesful!");
+        header("Content-Type: application/json");
+        echo json_encode($data);
+    };
 }catch(PDOException $e){
     echo "<p style='color:rgb(87, 119, 143)'>Connection failed. " . $e->getMessage()."</p>";
 };

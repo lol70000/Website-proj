@@ -26,7 +26,7 @@ try{
     $countpassword->execute();
     $countFinalPW = $countpassword->fetchColumn();
     echo " made it";
-    $insertnewuser = $conn->prepare("INSERT INTO user(name, pw) VALUES('$username','$countFinalPW')");
+    $insertnewuser = $conn->prepare("INSERT INTO user(username, pw) VALUES('$username','$countFinalPW')");
     $insertnewuser->execute();
 }catch(PDOException $e){
     echo "Connection failed" . $e->getMessage();
