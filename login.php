@@ -19,21 +19,23 @@ try {
 try{
     $username = $_POST['username'];
     $password = $_POST['password'];
-    echo "$username,$password";
-    $checkusername = $conn->prepare("SELECT username, pw FROM user");
+    //echo "$username,$password";
+    $checkusername = $conn->prepare("SELECT username, pw FROM user WHERE  username = '$username'");
     $checkusername->execute();
-    echo "hello";
     $countusername = $checkusername->fetchColumn();
-    echo"$countusername";
-    $checkpasswword = $conn->prepare("SELECT count(name) FROM pw WHERE name=$password AND id_pw=$countusername");
+    //echo"$countusername";
+    //echo "step one";
+    $checkpasswword = $conn->prepare("SELECT name FROM pw WHERE name = '$password'");
     $checkpasswword->execute();
     $countpassword = $checkpasswword->fetchColumn();
-    if($countusername == 0 || $countpassword == 0){
-        $data = array("Username/Password nicht vorhanden!");
+    //echo"$countpassword";
+    //echo"step two";
+    if($countusername == NULL || $countpassword == NULL){
+        $data = array("0");
         header("Content-Type: application/json");
         echo json_encode($data);
-    }elseif($countusername > 0 || $countpassword == 0){
-        $data = array("Login was succesful!");
+    }elseif($countusername != NULL || $countpassword != NULL){
+        $data = array("1");
         header("Content-Type: application/json");
         echo json_encode($data);
     };
