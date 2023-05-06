@@ -1,12 +1,12 @@
 <?php
-//$servername = "aropawoz.mysql.db.internal";
-//$user = "aropawoz_tobilu";
-//$pw = "WTp5g3bsVA8HfC-*f3+N";
-//$name = "aropawoz_financialplanning"
-$servername = "localhost";
-$user = "root";
-$pw = "root";
-$name ="ef5_webproj";
+$servername = "aropawoz.mysql.db.internal";
+$user = "aropawoz_tobilu";
+$pw = "WTp5g3bsVA8HfC-*f3+N";
+$name = "aropawoz_financialplanning";
+//$servername = "localhost";
+//$user = "root";
+//$pw = "root";
+//$name ="ef5_webproj";
 
 try {
     header("Access-Control-Allow-Origin: *");

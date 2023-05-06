@@ -4,12 +4,12 @@ let postObj = {
     body: "AJAX stands for Asynchronous JavaScript..."
 };
 
-function response_action(perser){
+function response_action(data){
     console.log("Du drägige bastard")
-    if(perser = "0"){
+    if (data.success == "0") {
         document.getElementById("response").innerHTML = "Login failed!Username/Password was wrong";
-    }else if(perser = "1"){
-        window.open("localhost/variableinput.html","_self")
+    } else if (data.success == "1") {
+        window.open("/variableinput.html", "_self")
     }
 }
 
@@ -25,8 +25,7 @@ function login_ajax(user_log, pw_log){
         if(xhr.status === 201){
             console.log("Post succesfully created!")
             console.log(xhr.response)
-            responses = JSON.parse(xhr.response).value
-            echo("kajananananananananananananan")
+            responses = JSON.parse(xhr.response)
             response_action(responses)
         }
     }

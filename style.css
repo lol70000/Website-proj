@@ -20,9 +20,12 @@
 
 .header{
     width:700px;
-    color: rgb(22, 144, 148);;
+    color: rgb(22, 144, 148);
 }
 
+.text2{
+    color:rgb(22, 144, 148);
+}
 .header2{
     font-size: 35px;
 }
@@ -37,7 +40,7 @@ body{
 
 .chart{
     width:700px;
-    height: 600px;
+    height: 375px;
 }
 
 .text{

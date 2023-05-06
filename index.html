@@ -19,13 +19,14 @@
     <div class="flex-row">
       <div>
         <section id="charts">
-          <h2>Capital</h2>
-          <div class="box2">
+          <div class="box2 flex-column">
+            <h2 class="text2">Income</h2>
             <div class="chart">
-              <canvas id="Capital_general" style="width:100%;max-width:700px;height:100%"></canvas>
+              <canvas id="income" style="width:100%;max-width:700px;height:300px"></canvas>
             </div>
-            <div>
-              <h3 class="text" id="Remaining_balance"></h3>
+            <h2 class="text2">Expenditude</h2>
+            <div class="chart">
+              <canvas id="outcome" style="width:100%;max-width:700px;height:300px"></canvas>
             </div>
           </div>
         </section>
@@ -33,17 +34,21 @@
 
       <div class="flex-column">
         <div>
-          <h2>Current Status</h2>
+          <h2 class="text2">most recent</h2>
           <div>
+            <p class="text2">Income</p>
             <p id="one" class="box3"></p>
           </div>
           <div>
+            <p class="text2">Outgoing</p>
             <p id="two" class="box3"></p>
           </div>
         </div>
       </div>
     </div>
-
+    <div>
+      <a href="/variableinput.html" target="_self" class="text2">Here you can input new data</a>
+    </div>
   </main>
 
   <script src="function.js"></script>

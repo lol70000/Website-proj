@@ -1,12 +1,12 @@
 <?php
-//$servername = "aropawoz.mysql.db.internal";
-//$user = "aropawoz_tobilu";
-//$pw = "WTp5g3bsVA8HfC-*f3+N";
-//$name = "aropawoz_financialplanning"
-$servername = "localhost";
-$user = "root";
-$pw = "root";
-$name ="ef5_webproj";
+$servername = "aropawoz.mysql.db.internal";
+$user = "aropawoz_tobilu";
+$pw = "WTp5g3bsVA8HfC-*f3+N";
+$name = "aropawoz_financialplanning";
+//$servername = "localhost";
+//$user = "root";
+//$pw = "root";
+//$name ="ef5_webproj";
 
 try {
     header("Access-Control-Allow-Origin: *");
@@ -31,13 +31,15 @@ try{
     //echo"$countpassword";
     //echo"step two";
     if($countusername == NULL || $countpassword == NULL){
-        $data = array("0");
+        $data = array('success' => 0);
         header("Content-Type: application/json");
         echo json_encode($data);
+        exit();
     }elseif($countusername != NULL || $countpassword != NULL){
-        $data = array("1");
+        $data = array('success' => 1);
         header("Content-Type: application/json");
         echo json_encode($data);
+        exit();
     };
 }catch(PDOException $e){
     echo "<p style='color:rgb(87, 119, 143)'>Connection failed. " . $e->getMessage()."</p>";

@@ -1,14 +1,14 @@
 
 <?php
 
-//$servername = "aropawoz.mysql.db.internal";
-//$username = "aropawoz_tobilu";
-//$password = "WTp5g3bsVA8HfC-*f3+N";
-//$name = "aropawoz_financialplanning"
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$name ="ef5_webproj";
+$servername = "aropawoz.mysql.db.internal";
+$username = "aropawoz_tobilu";
+$password = "WTp5g3bsVA8HfC-*f3+N";
+$name = "aropawoz_financialplanning";
+//$servername = "localhost";
+//$username = "root";
+//$password = "root";
+//$name ="ef5_webproj";
 
 //Establish connection with database
 try{
